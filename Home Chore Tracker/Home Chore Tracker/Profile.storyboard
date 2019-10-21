@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Evq-yS-vqs">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Efh-yr-etW">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
@@ -16,19 +16,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6TB-4U-pvH">
-                                <rect key="frame" x="20" y="108" width="87" height="41"/>
+                                <rect key="frame" x="20" y="64" width="87" height="41"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cSt-ph-S86">
-                                <rect key="frame" x="20" y="157" width="374" height="374"/>
+                                <rect key="frame" x="20" y="113" width="374" height="374"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="cSt-ph-S86" secondAttribute="height" multiplier="1:1" id="hpg-0E-gRL"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ijN-PY-Zkl">
-                                <rect key="frame" x="20" y="539" width="374" height="30"/>
+                                <rect key="frame" x="20" y="495" width="374" height="30"/>
                                 <state key="normal" title="Choose Picture"/>
                                 <connections>
                                     <action selector="choosePictureTapped:" destination="Efh-yr-etW" eventType="touchUpInside" id="1Ih-bN-Ksw"/>
@@ -52,29 +52,12 @@
                     <connections>
                         <outlet property="choosePictureButton" destination="ijN-PY-Zkl" id="w64-Q1-Xko"/>
                         <outlet property="imageView" destination="cSt-ph-S86" id="i9p-tl-CbI"/>
+                        <outlet property="nameLabel" destination="6TB-4U-pvH" id="NCF-qj-4Hs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9du-w6-eKM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1166.6666666666667" y="-321.42857142857139"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="n30-Dt-hJ8">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Evq-yS-vqs" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="7UW-mk-HVb">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="Efh-yr-etW" kind="relationship" relationship="rootViewController" id="lVx-aU-7so"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="e4A-g7-xag" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="256.52173913043481" y="-321.42857142857139"/>
         </scene>
     </scenes>
 </document>

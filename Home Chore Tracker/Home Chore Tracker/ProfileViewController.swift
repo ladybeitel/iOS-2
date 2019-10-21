@@ -15,6 +15,7 @@ class ProfileViewController: UIViewController {
     
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var choosePictureButton: UIButton!
+    @IBOutlet weak var nameLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -60,6 +61,9 @@ class ProfileViewController: UIViewController {
     
     private func updateViews() {
         let highlightColor = UIColor(red:0.02, green:0.69, blue:0.31, alpha:1.0)
+        let textColor = UIColor(red:0.02, green:0.33, blue:0.59, alpha:1.0)
+        
+        nameLabel.textColor = textColor
 
         if imageView.image != nil {
             imageView.layer.borderColor = highlightColor.cgColor
