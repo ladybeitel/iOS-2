@@ -21,14 +21,14 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cSt-ph-S86">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cSt-ph-S86">
                                 <rect key="frame" x="20" y="157" width="374" height="374"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="cSt-ph-S86" secondAttribute="height" multiplier="1:1" id="hpg-0E-gRL"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ijN-PY-Zkl">
-                                <rect key="frame" x="154.5" y="539" width="105" height="30"/>
+                                <rect key="frame" x="20" y="539" width="374" height="30"/>
                                 <state key="normal" title="Choose Picture"/>
                                 <connections>
                                     <action selector="choosePictureTapped:" destination="Efh-yr-etW" eventType="touchUpInside" id="1Ih-bN-Ksw"/>
@@ -39,9 +39,10 @@
                         <constraints>
                             <constraint firstItem="6TB-4U-pvH" firstAttribute="leading" secondItem="yR7-jd-O5k" secondAttribute="leading" constant="20" id="2rW-yz-Usj"/>
                             <constraint firstItem="ijN-PY-Zkl" firstAttribute="top" secondItem="cSt-ph-S86" secondAttribute="bottom" constant="8" id="A3P-zb-2FC"/>
-                            <constraint firstItem="ijN-PY-Zkl" firstAttribute="centerX" secondItem="6Am-aD-UaM" secondAttribute="centerX" id="DXg-oV-Sgi"/>
                             <constraint firstItem="cSt-ph-S86" firstAttribute="top" secondItem="6TB-4U-pvH" secondAttribute="bottom" constant="8" id="FMH-Z0-4eo"/>
                             <constraint firstItem="yR7-jd-O5k" firstAttribute="trailing" secondItem="cSt-ph-S86" secondAttribute="trailing" constant="20" id="JXf-0H-h8f"/>
+                            <constraint firstItem="ijN-PY-Zkl" firstAttribute="leading" secondItem="cSt-ph-S86" secondAttribute="leading" id="NG3-go-1QY"/>
+                            <constraint firstItem="ijN-PY-Zkl" firstAttribute="trailing" secondItem="cSt-ph-S86" secondAttribute="trailing" id="feH-ek-ny7"/>
                             <constraint firstItem="cSt-ph-S86" firstAttribute="leading" secondItem="yR7-jd-O5k" secondAttribute="leading" constant="20" id="h2m-Sd-T6Q"/>
                             <constraint firstItem="6TB-4U-pvH" firstAttribute="top" secondItem="yR7-jd-O5k" secondAttribute="top" constant="20" id="v0h-5N-Ccn"/>
                         </constraints>
@@ -49,6 +50,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Profile" id="iMv-df-i88"/>
                     <connections>
+                        <outlet property="choosePictureButton" destination="ijN-PY-Zkl" id="w64-Q1-Xko"/>
                         <outlet property="imageView" destination="cSt-ph-S86" id="i9p-tl-CbI"/>
                     </connections>
                 </viewController>

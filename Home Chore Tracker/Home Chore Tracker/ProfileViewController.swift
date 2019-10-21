@@ -14,11 +14,12 @@ class ProfileViewController: UIViewController {
     // MARK: - Outlets
     
     @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var choosePictureButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        updateViews()
     }
     
     // MARK: - Actions
@@ -56,6 +57,20 @@ class ProfileViewController: UIViewController {
         
         present(imagePicker, animated: true, completion: nil)
     }
+    
+    private func updateViews() {
+        let highlightColor = UIColor(red:0.02, green:0.69, blue:0.31, alpha:1.0)
+
+        if imageView.image != nil {
+            imageView.layer.borderColor = highlightColor.cgColor
+            imageView.layer.borderWidth = 4
+            imageView.layer.cornerRadius = 10
+        }
+        
+        choosePictureButton.setTitleColor(.white, for: .normal)
+        choosePictureButton.layer.backgroundColor = highlightColor.cgColor
+        choosePictureButton.layer.cornerRadius = 10
+    }
 
 }
 
@@ -69,5 +84,6 @@ extension ProfileViewController: UIImagePickerControllerDelegate, UINavigationCo
         guard let image = info[.originalImage] as? UIImage else { return }
         
         imageView.image = image
+        updateViews()
     }
 }
