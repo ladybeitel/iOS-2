@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Q9G-Zz-EJF">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
@@ -7,10 +7,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Points View Controller-->
         <scene sceneID="U7c-Bk-idf">
             <objects>
-                <viewController id="Q9G-Zz-EJF" sceneMemberID="viewController">
+                <viewController id="Q9G-Zz-EJF" customClass="PointsViewController" customModule="Home_Chore_Tracker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qRQ-Xt-vk0">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -18,7 +18,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="46" translatesAutoresizingMaskIntoConstraints="NO" id="Jqk-23-oEu">
                                 <rect key="frame" x="20" y="193.5" width="374" height="509"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Uhk-SX-dg7">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="StarPoints" translatesAutoresizingMaskIntoConstraints="NO" id="Uhk-SX-dg7">
                                         <rect key="frame" x="67" y="0.0" width="240" height="240"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="240" id="pDZ-cS-rsK"/>
@@ -67,10 +67,18 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="mSx-0B-e7W"/>
                     </view>
+                    <connections>
+                        <outlet property="pointsContainerView" destination="33T-2s-Lwi" id="QXt-xv-Eg5"/>
+                        <outlet property="pointsEarnedLabel" destination="HwZ-kY-8Vq" id="4Kz-dd-Zx2"/>
+                        <outlet property="pointsLabel" destination="eMk-Ub-eVN" id="Vek-Vg-HDI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B7A-Fu-1Kk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="514" y="-352"/>
+            <point key="canvasLocation" x="517" y="-346"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="StarPoints" width="612" height="792"/>
+    </resources>
 </document>
