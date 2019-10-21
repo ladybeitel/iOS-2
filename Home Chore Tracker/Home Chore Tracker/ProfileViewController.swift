@@ -69,7 +69,7 @@ class ProfileViewController: UIViewController {
         
         choosePictureButton.setTitleColor(.white, for: .normal)
         choosePictureButton.layer.backgroundColor = highlightColor.cgColor
-        choosePictureButton.layer.cornerRadius = 10
+        choosePictureButton.layer.cornerRadius = 5
     }
 
 }
